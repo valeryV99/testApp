@@ -4,6 +4,7 @@ html,body, #root, .App {
   justify-content: center;
   height: 100%;
   width: 100%;
+  position: relative;
 }
 
 .App {
@@ -23,6 +24,7 @@ textarea {
   font-weight: 600;
   font-size: 40px;
   border: none;
+  resize: none;
 }
 
 .twitterButton {

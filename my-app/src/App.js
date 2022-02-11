@@ -1,5 +1,4 @@
 import "./App.css";
-import { TwitterShareButton } from "react-share";
 import { useState } from "react";
 import imgB from './img.png';
 
@@ -23,13 +22,7 @@ function App() {
           setTextValue(value.slice(0, maxTextLength))
         }
       />
-      <TwitterShareButton
-        className="twitterButton"
-        url={URL}
-        title={textValue}
-        hashtags={DEFAULT_HASHTAGS}
-      >
-      </TwitterShareButton>
+        <a target="_blank" className="twitterButton" href={`https://twitter.com/intent/tweet?url=${URL}&text=${textValue}&hashtags=3Commas%2C3CommasLove%2C3CommasApps`} />
     </div>
   );
 }
