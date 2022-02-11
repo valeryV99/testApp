@@ -32,19 +32,23 @@ textarea {
   align-items: center;
   width: 365px;
   height: 90px;
-  background: url("./Default.svg") no-repeat;
+  /*background: url("./Default.svg") no-repeat;*/
   cursor: pointer;
   position: absolute;
   left: 5%;
   bottom: 100px;
 }
 
-.twitterButton:hover {
-  background-image: url("./Hover.svg");
+.twitterButton:before {
+  content: url("./Default.svg");
 }
 
-.twitterButton:active {
-  background-image: url("./Push.svg");
+.twitterButton:hover:before {
+  content: url("./Hover.svg");
+}
+
+.twitterButton:active:before {
+  content: url("./Push.svg");
 }
 
 .tweetLabel {
