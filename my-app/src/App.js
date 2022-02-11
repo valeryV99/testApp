@@ -22,7 +22,7 @@ function App() {
           setTextValue(value.slice(0, maxTextLength))
         }
       />
-        <a target="_blank" className="twitterButton" href={`https://twitter.com/intent/tweet?url=${URL}&text=${textValue}&hashtags=3Commas%2C3CommasLove%2C3CommasApps`} />
+        <a target="_blank" className="twitterButton" href={`https://twitter.com/intent/tweet?url=${URL}&text=${textValue}&hashtags=3Commas%2C3CommasLove%2C3CommasApps`} rel="noopener noreferrer" />
     </div>
   );
 }
