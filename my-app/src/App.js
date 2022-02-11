@@ -1,8 +1,9 @@
 import "./App.css";
-import { TwitterShareButton, TwitterIcon } from "react-share";
+import { TwitterShareButton } from "react-share";
 import { useState } from "react";
+import imgB from './img.png';
 
-const MAX_TWIT_LENGTH = 279;
+const MAX_TWIT_LENGTH = 269;
 const URL = "https://3commas.io";
 const DEFAULT_HASHTAGS = ["3Commas", "3CommasLove", "3CommasApps"];
 
@@ -12,7 +13,11 @@ function App() {
     MAX_TWIT_LENGTH - URL.length - DEFAULT_HASHTAGS.toString().length;
   return (
     <div className="App">
-      <textarea
+        <img width='100%' height='100%' src={imgB}  alt='14 February iamge'/>
+        <textarea
+            placeholder='Start typing your wishes For example, It’s just one day in the year, but you should know that I love you every day and every moment. Take my love on this beautiful occasion!'
+            style={{    width: '672px',
+                height: '418px'}}
         value={textValue}
         onChange={({ target: { value } }) =>
           setTextValue(value.slice(0, maxTextLength))
@@ -24,7 +29,6 @@ function App() {
         title={textValue}
         hashtags={DEFAULT_HASHTAGS}
       >
-        <TwitterIcon size={20} /> <span className="tweetLabel">Tweet</span>
       </TwitterShareButton>
     </div>
   );
