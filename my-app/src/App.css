@@ -32,7 +32,7 @@ textarea {
   align-items: center;
   width: 365px;
   height: 90px;
-  /*background: url("./Default.svg") no-repeat;*/
+  background: url("./Default.svg") no-repeat;
   cursor: pointer;
   position: absolute;
   left: 5%;
