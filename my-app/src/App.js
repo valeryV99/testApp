@@ -1,7 +1,7 @@
 import "./App.css";
 import { useState } from "react";
 import imgB from './img.png';
-
+import { TwitterShareButton } from "react-share";
 const MAX_TWIT_LENGTH = 269;
 const URL = "https://3commas.io";
 const DEFAULT_HASHTAGS = ["3Commas", "3CommasLove", "3CommasApps"];
@@ -22,7 +22,12 @@ function App() {
           setTextValue(value.slice(0, maxTextLength))
         }
       />
-        <a target="_blank" className="twitterButton" href={`https://twitter.com/intent/tweet?url=${URL}&text=${textValue}&hashtags=3Commas%2C3CommasLove%2C3CommasApps`} rel="noopener noreferrer" />
+        <TwitterShareButton
+    className="twitterButton"
+    url={URL}
+    title={textValue}
+    hashtags={DEFAULT_HASHTAGS}
+    />
     </div>
   );
 }
