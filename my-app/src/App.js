@@ -7,6 +7,7 @@ const DEFAULT_HASHTAGS = ["3Commas", "3CommasLove", "3CommasApps"];
 
 function App() {
   const [textValue, setTextValue] = useState("");
+
   const maxTextLength =
     MAX_TWIT_LENGTH - URL.length - DEFAULT_HASHTAGS.toString().length;
 
